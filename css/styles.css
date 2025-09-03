@@ -52,9 +52,30 @@ body {
     width: 100%; /* Ensures the Jeremy section takes full width */
     border-radius: 15px;
     padding: 32px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+p {
+    font-weight: var(--font-weight-regular);
+    color: var(--navy-200);
+    font-size: 15px;
+}
+.jeremy-name {
+    font-size: 24px;
+    font-weight: var(--font-weight-light);
 }
 .timeframe {
     margin-top: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: clamp(4rem, 4.5vw, 7rem);
+}
+.btn {
+    background-color: var(--navy-900);
+    border-style: none;
+    color: var(--purple-500);
 }
 .top-color {
     display: flex;
@@ -100,10 +121,10 @@ h1 {
     border: 4px solid white;
     border-radius: 50%;
 }
-.timeframe {
-    display: flex;
-    /* align-items: center; */
-    /* justify-content: space-between; */
+.activity-name {
+    font-size: 18px;
+    font-weight: var(--font-weight-medium);
+    color: white;
 }
 .activity-elipsis {
     display: flex;
