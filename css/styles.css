@@ -35,6 +35,7 @@ body {
     flex-direction: column;
     align-items: center;
     padding: 20px;
+    margin-top: 35px;
     gap: 24px;
 }
 .jeremy-container {
@@ -81,9 +82,7 @@ p {
     display: flex;
     flex-direction: column;
     height: 160px;
-    width: 100%; /* Ensures the top-color section takes full width */
-    border-radius: 15px;
-
+    width: 100%; /*Ensures the top-color section takes full width */
 }
 .container {
     background-color: var(--navy-900);
@@ -93,24 +92,39 @@ p {
     padding: 24px;
     margin-top: auto; /* Pushes the container to the bottom of the parent */
 }
-
-#orange {
+.background-svg {
+    background-repeat: no-repeat;
+    color: var(--orange-300);
+    height: 60px;
+    width: 100%;
+    background-position: 13em;
+    background-size: 4em;
+    margin-bottom: -1em;
+    border-radius: 15px 15px 0 0;
+}
+.orange {
     background-color: var(--orange-300);
+    background-image: url(../assets/images/icon-work.svg);
 }
-#sky-blue {
+.sky-blue {
     background-color: var(--blue-300);
+    background-image: url(../assets/images/icon-play.svg);
 }
-#pink {
+.pink {
     background-color: var(--pink-400);
+    background-image: url(../assets/images/icon-study.svg);
 }
-#green {
+.green {
     background-color: var(--green-400);
+    background-image: url(../assets/images/icon-exercise.svg);
 }
-#yellow {
+.purple {
+    background-color: var(--purple-500);
+    background-image: url(../assets/images/icon-social.svg);
+}
+.yellow {
     background-color: var(--yellow-300);
-}
-#purple-700 {
-    background-color: var(--purple-700);
+    background-image: url(../assets/images/icon-self-care.svg);
 }
 h1 {
     font-weight: var(--font-weight-light);
@@ -129,7 +143,9 @@ h1 {
 .activity-elipsis {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+}
+.activity-elipsis img {
+    margin-left: auto;   /* this pushes the ellipsis to the right */
 }
 .duration {
     display: flex;
