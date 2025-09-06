@@ -97,7 +97,7 @@ p {
     color: var(--orange-300);
     height: 60px;
     width: 100%;
-    background-position: 13em;
+    background-position: right 1em center; /*pushes the svg icons to the right with some padding */
     background-size: 4em;
     margin-bottom: -1em;
     border-radius: 15px 15px 0 0;
