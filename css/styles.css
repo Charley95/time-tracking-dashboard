@@ -1,8 +1,10 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* Ensures padding and border are included in element's total width and height */
+    box-sizing: border-box;
+    /* Ensures padding and border are included in element's total width and height */
 }
+
 :root {
     /* colors */
     --purple-600: hsl(246, 80%, 60%);
@@ -18,7 +20,7 @@
     --navy-200: hsl(236, 100%, 87%);
 
     /* fonts */
-    --font-family-base: 'Rubik', sans-serif;
+    --font-family-base: "Rubik", sans-serif;
     --font-weight-light: 300;
     --font-weight-regular: 400;
     --font-weight-medium: 500;
@@ -30,6 +32,7 @@ body {
     font-weight: var(--font-weight-regular);
     font-size: 18px;
 }
+
 .main-container {
     display: flex;
     flex-direction: column;
@@ -38,34 +41,41 @@ body {
     margin-top: 35px;
     gap: 24px;
 }
+
 .jeremy-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     height: 203px;
-    width: 100%; /* Ensures the container takes full width */
+    width: 100%;
+    /* Ensures the container takes full width */
     background-color: var(--navy-900);
     border-radius: 15px;
 }
+
 .jeremy {
     background-color: var(--purple-600);
     height: 133px;
-    width: 100%; /* Ensures the Jeremy section takes full width */
+    width: 100%;
+    /* Ensures the Jeremy section takes full width */
     border-radius: 15px;
     padding: 32px;
     display: flex;
     align-items: center;
     gap: 24px;
 }
+
 p {
     font-weight: var(--font-weight-regular);
     color: var(--navy-200);
     font-size: 15px;
 }
+
 .jeremy-name {
     font-size: 24px;
     font-weight: var(--font-weight-light);
 }
+
 .timeframe {
     margin-top: 24px;
     display: flex;
@@ -73,88 +83,205 @@ p {
     justify-content: space-between;
     gap: clamp(4rem, 4.5vw, 7rem);
 }
+
 .btn {
     background-color: var(--navy-900);
     border-style: none;
     color: var(--purple-500);
 }
+
 .top-color {
     display: flex;
     flex-direction: column;
     height: 160px;
-    width: 100%; /*Ensures the top-color section takes full width */
+    width: 100%;
+    /*Ensures the top-color section takes full width */
 }
+
 .container {
     background-color: var(--navy-900);
     height: 122px;
-    width: 100%; 
-    border-radius: 15px; /* Ensures all corners are curved */
+    width: 100%;
+    border-radius: 15px;
+    /* Ensures all corners are curved */
     padding: 24px;
-    margin-top: auto; /* Pushes the container to the bottom of the parent */
+    margin-top: auto;
+    /* Pushes the container to the bottom of the parent */
 }
+
 .background-svg {
     background-repeat: no-repeat;
     color: var(--orange-300);
     height: 60px;
     width: 100%;
-    background-position: right 1em center; /*pushes the svg icons to the right with some padding */
+    background-position: right 1em center;
+    /*pushes the svg icons to the right with some padding */
     background-size: 4em;
     margin-bottom: -1em;
     border-radius: 15px 15px 0 0;
 }
+
 .orange {
     background-color: var(--orange-300);
     background-image: url(../assets/images/icon-work.svg);
 }
+
 .sky-blue {
     background-color: var(--blue-300);
     background-image: url(../assets/images/icon-play.svg);
 }
+
 .pink {
     background-color: var(--pink-400);
     background-image: url(../assets/images/icon-study.svg);
 }
+
 .green {
     background-color: var(--green-400);
     background-image: url(../assets/images/icon-exercise.svg);
 }
+
 .purple {
     background-color: var(--purple-500);
     background-image: url(../assets/images/icon-social.svg);
 }
+
 .yellow {
     background-color: var(--yellow-300);
     background-image: url(../assets/images/icon-self-care.svg);
 }
+
 h1 {
     font-weight: var(--font-weight-light);
     color: white;
 }
+
 .jeremy-image {
     height: 64px;
     border: 4px solid white;
     border-radius: 50%;
 }
+
 .activity-name {
     font-size: 18px;
     font-weight: var(--font-weight-medium);
     color: white;
 }
+
 .activity-elipsis {
     display: flex;
     align-items: center;
 }
+
 .activity-elipsis img {
-    margin-left: auto;   /* this pushes the ellipsis to the right */
+    margin-left: auto;
+    /* this pushes the ellipsis to the right */
 }
+
 .duration {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    color: white;
+}
 
+.attribution a {
+    color: var(--navy-200);
+}
 
+/* MEDIA QUERY FOR TABLETS */
 
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+@media screen and (min-width: 768px) {
+    .main-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        /*Sets 3 equal columns*/
+        grid-template-rows: 203px 213px 213px;
+        gap: 24px;
+        padding: 100px 78px 70px 78px;
+    }
+
+    .jeremy-container {
+        grid-column-end: span 3;
+    }
+
+    .top-color,
+    .jeremy-container,
+    .container {
+        height: 100% !important;
+        /*this overrides fixed heights earlier set*/
+        width: 100% !important;
+        margin: 0 !important;
+    }
+
+    .background-svg {
+        background-size: 3em;
+    }
+
+    .duration {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .activity-elipsis {
+        margin-bottom: 8px;
+    }
+
+    h1 {
+        font-size: 56px;
+    }
+}
+
+/* MEDIA QUERY FOR DESKTOP */
+@media  screen and (min-width: 1440px) {
+    .main-container {
+        grid-template-columns: 255px 255px 255px 255px;
+        grid-template-rows: 244px 244px;
+        max-width: 1116px;
+        height: 100%;
+        gap: 32px;
+        margin: 0 auto;
+        padding: 100px 24px 70px 24px;
+    }
+    .jeremy-container {
+        grid-column-end: span 1;
+        grid-row-end: span 2;
+       
+    }
+    .jeremy {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        height: 354px;
+        gap: 40px;
+    }
+    .jeremy-image {
+        height: 78px;
+    }
+    .jeremy-name {
+        font-size: 40px;
+        font-weight: var(--font-weight-light);
+    }
+    .timeframe {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 23px;
+        margin-right: auto;
+        padding-left: 32px;
+        word-spacing: 21px;
+    }
+    .btn {
+        font-size: 18px;
+        font-weight: var(--font-weight-regular);
+    }
+    .activity-elipsis {
+        margin-bottom: 24px;
+    }
+}
