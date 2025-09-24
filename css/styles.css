@@ -183,6 +183,9 @@ h1 {
     align-items: center;
     justify-content: space-between;
 }
+.active {
+    color: white;
+}
 
 .attribution {
     font-size: 11px;
