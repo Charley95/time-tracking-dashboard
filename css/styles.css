@@ -30,7 +30,7 @@ body {
     background-color: var(--navy-950);
     font-family: var(--font-family-base);
     font-weight: var(--font-weight-regular);
-    font-size: 18px;
+    font-size: 1.125rem;
 }
 
 .main-container {
@@ -46,7 +46,6 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 203px;
     width: 100%;
     /* Ensures the container takes full width */
     background-color: var(--navy-900);
@@ -68,11 +67,11 @@ body {
 p {
     font-weight: var(--font-weight-regular);
     color: var(--navy-200);
-    font-size: 15px;
+    font-size: 0.94rem;
 }
 
 .jeremy-name {
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: var(--font-weight-light);
 }
 
@@ -88,6 +87,10 @@ p {
     background-color: var(--navy-900);
     border-style: none;
     color: var(--purple-500);
+}
+
+.btn:hover {
+    color: white;
 }
 
 .top-color {
@@ -154,6 +157,7 @@ p {
 h1 {
     font-weight: var(--font-weight-light);
     color: white;
+    font-size: 2rem;
 }
 
 .jeremy-image {
@@ -163,7 +167,7 @@ h1 {
 }
 
 .activity-name {
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: var(--font-weight-medium);
     color: white;
 }
@@ -183,12 +187,13 @@ h1 {
     align-items: center;
     justify-content: space-between;
 }
+
 .active {
     color: white;
 }
 
 .attribution {
-    font-size: 11px;
+    font-size: 0.6875rem;
     text-align: center;
     color: white;
 }
@@ -199,7 +204,9 @@ h1 {
 
 /* MEDIA QUERY FOR TABLETS */
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48em) {
+
+    /* 768px / 16 = 48em*/
     .main-container {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -213,13 +220,12 @@ h1 {
         grid-column-end: span 3;
     }
 
-    .top-color,
-    .jeremy-container,
-    .container {
-        height: 100% !important;
-        /*this overrides fixed heights earlier set*/
-        width: 100% !important;
-        margin: 0 !important;
+    .main-container .top-color,
+    .main-container .jeremy-container,
+    .main-container .container {
+        height: 100%;
+        width: 100%;
+        margin: 0;
     }
 
     .background-svg {
@@ -238,12 +244,14 @@ h1 {
     }
 
     h1 {
-        font-size: 56px;
+        font-size: 3.5rem;
     }
 }
 
 /* MEDIA QUERY FOR DESKTOP */
-@media  screen and (min-width: 1440px) {
+@media screen and (min-width: 90em) {
+
+    /* 1440px / 16 = 90em*/
     .main-container {
         grid-template-columns: 255px 255px 255px 255px;
         grid-template-rows: 244px 244px;
@@ -253,11 +261,12 @@ h1 {
         margin: 0 auto;
         padding: 100px 24px 70px 24px;
     }
+
     .jeremy-container {
         grid-column-end: span 1;
         grid-row-end: span 2;
-       
     }
+
     .jeremy {
         display: flex;
         flex-direction: column;
@@ -265,13 +274,16 @@ h1 {
         height: 354px;
         gap: 40px;
     }
+
     .jeremy-image {
         height: 78px;
     }
+
     .jeremy-name {
-        font-size: 40px;
+        font-size: 2.5rem;
         font-weight: var(--font-weight-light);
     }
+
     .timeframe {
         flex-direction: column;
         align-items: flex-start;
@@ -280,10 +292,12 @@ h1 {
         padding-left: 32px;
         word-spacing: 21px;
     }
+
     .btn {
-        font-size: 18px;
+        font-size: 1.125rem;
         font-weight: var(--font-weight-regular);
     }
+
     .activity-elipsis {
         margin-bottom: 24px;
     }
