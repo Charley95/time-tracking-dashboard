@@ -79,14 +79,23 @@ p {
     margin-top: 24px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: clamp(4rem, 4.5vw, 7rem);
+    justify-content: flex-start;
+    padding: 0 35px;
+    width: 100%;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
 }
 
 .btn {
     background-color: var(--navy-900);
     border-style: none;
     color: var(--purple-500);
+    padding: 0.5em 1.5em;
+    min-width: 60px;
+    cursor: pointer;
+    flex: 1 1 0;
+    /* This allows buttons to grow and shrink equally*/
+    text-align: center;
 }
 
 .btn:hover {
@@ -192,16 +201,6 @@ h1 {
     color: white;
 }
 
-.attribution {
-    font-size: 0.6875rem;
-    text-align: center;
-    color: white;
-}
-
-.attribution a {
-    color: var(--navy-200);
-}
-
 /* MEDIA QUERY FOR TABLETS */
 
 @media screen and (min-width: 48em) {
@@ -251,7 +250,7 @@ h1 {
 /* MEDIA QUERY FOR DESKTOP */
 @media screen and (min-width: 90em) {
 
-    /* 1440px / 16 = 90em*/
+    /* 1440px divided by 16 = 90em*/
     .main-container {
         grid-template-columns: 255px 255px 255px 255px;
         grid-template-rows: 244px 244px;
@@ -287,15 +286,19 @@ h1 {
     .timeframe {
         flex-direction: column;
         align-items: flex-start;
-        gap: 23px;
+        gap: 3px;
         margin-right: auto;
-        padding-left: 32px;
-        word-spacing: 21px;
+        margin-bottom: 30px;
+        padding-left: 0;
     }
 
     .btn {
         font-size: 1.125rem;
         font-weight: var(--font-weight-regular);
+    }
+
+    .main-container .container {
+        height: 200px;
     }
 
     .activity-elipsis {
